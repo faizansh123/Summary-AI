@@ -9,10 +9,16 @@ const app = express();
 
 // ✅ Middleware
 app.use(cors());
+app.options('*', cors()); // ✅ fix for CORS preflight requests
 app.use(express.json({ limit: '10mb' }));
 
 // ✅ Google GenAI setup
 const ai = new GoogleGenAI({ apiKey: process.env.GOOGLE_GENAI_API_KEY });
+
+// ✅ Root health check route
+app.get('/', (req, res) => {
+    res.send('✅ Railway backend is running');
+});
 
 // ✅ Summary route
 app.post('/api/summary', async (req, res) => {
@@ -42,7 +48,7 @@ app.post('/api/summary', async (req, res) => {
 
         res.json({ summary: response.text });
     } catch (error) {
-        console.error('Error in /api/summary:', error.message);
+        console.error('❌ Error in /api/summary:', error.message);
         res.status(500).json({ error: 'Failed to summarize document.' });
     }
 });
@@ -56,7 +62,7 @@ app.post('/api/chat', async (req, res) => {
             {
                 text: `
 Answer this question about the attached document: ${question}.
-Reply as a chat bot with short plain text (no markdowns, tags or symbols).
+Reply as a chat bot with short plain text only (no markdowns, tags or symbols).
 Chat history: ${JSON.stringify(chatHistory)}
                 `
             },
@@ -75,7 +81,7 @@ Chat history: ${JSON.stringify(chatHistory)}
 
         res.json({ answer: response.text });
     } catch (error) {
-        console.error('Error in /api/chat:', error.message);
+        console.error('❌ Error in /api/chat:', error.message);
         res.status(500).json({ error: 'Failed to get chat response.' });
     }
 });
