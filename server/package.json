@@ -9,12 +9,20 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "\"# summary-ai-backend\"",
   "dependencies": {
     "@google/genai": "^0.13.0",
     "axios": "^1.9.0",
     "cors": "^2.8.5",
     "dotenv": "^16.5.0",
     "express": "^5.1.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YOUR_REAL_USERNAME/summary-backend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/YOUR_REAL_USERNAME/summary-backend/issues"
+  },
+  "homepage": "https://github.com/YOUR_REAL_USERNAME/summary-backend#readme"
 }
