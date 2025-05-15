@@ -1,0 +1,26 @@
+.header {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.header-title {
+  color: #eeeef0;
+  font-family: Inter, sans-serif;
+  font-size: 106.9px;
+  font-weight: 600;
+  line-height: 112px;
+}
+
+.header-subtitle {
+  color: #bdbfc4;
+  font-family: Inter, sans-serif;
+  font-size: 35.2px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.header-divider {
+  width: 60%;
+  margin: 30px auto;
+  border: 1px solid #2a55a7;
+}

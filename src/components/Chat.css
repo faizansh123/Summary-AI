@@ -1,0 +1,107 @@
+.chat-window {
+  text-align: center;
+  margin: 50px auto;
+  max-width: 800px;
+}
+
+.chat-window h2 {
+  font-family: Inter, sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: #eaebed;
+  margin-bottom: 20px;
+}
+
+.chat {
+  max-height: 400px;
+  overflow-y: auto;
+  background-color: #05102a;
+  border: 2px solid #152547;
+  border-radius: 16px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+/* Message styles */
+.chat div p {
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  padding: 10px 15px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  display: inline-block;
+  max-width: 70%;
+}
+
+.user p {
+  background-color: #376ee7;
+  color: #dbe4fa;
+  text-align: right;
+  float: right;
+}
+
+.model p {
+  background-color: #2a55a7;
+  color: #dbe4fa;
+  text-align: left;
+  float: left;
+}
+
+.loader p {
+  background-color: #7f8ca1;
+  color: white;
+  font-style: italic;
+}
+
+.error p {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+/* Clear floats */
+.chat div::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Input area */
+.input-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-area input {
+  width: 60%;
+  padding: 15px;
+  border: 1px solid #2a55a7;
+  border-radius: 30px;
+  font-size: 16px;
+  outline: none;
+  background-color: #05102a;
+  color: #dbe4fa;
+  font-family: Inter, sans-serif;
+  margin-right: 15px;
+}
+
+.input-area input::placeholder {
+  color: #99a3b4;
+}
+
+.input-area button {
+  padding: 15px 30px;
+  background-color: #386ee8;
+  border: none;
+  border-radius: 30px;
+  color: #d3dff9;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.input-area button:hover {
+  background-color: #2a55a7;
+}

@@ -1,0 +1,50 @@
+.summary-section {
+  text-align: center;
+  margin: 60px auto;
+  max-width: 800px;
+}
+
+.summary-image-container {
+  display: flex;
+  justify-content: center;
+}
+
+.summary-image {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px auto;
+  border: 2px solid #2a55a7;
+  border-radius: 10px;
+}
+
+.summary-image.pdf-icon {
+  width: 150px;         /* smaller fixed size for PDF icon */
+  max-width: none;
+  border: none;         /* optional: remove border for pdf icon */
+  border-radius: 0;
+}
+
+
+
+.summary-title {
+  font-family: Inter, sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: #eaebed;
+  margin-bottom: 20px;
+}
+
+.summary-text {
+  font-family: Inter, sans-serif;
+  font-size: 18px;
+  color: #d3dff9;
+  line-height: 1.6;
+  text-align: justify;
+  padding: 0 20px;
+}
+
+.summary-text.error {
+  color: #ff6b6b;
+}
