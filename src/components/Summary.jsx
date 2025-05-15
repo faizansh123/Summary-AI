@@ -10,7 +10,7 @@ function Summary({ file }) {
     setStatus("loading");
 
     try {
-      const response = await fetch('https://summary-ai-production.up.railway.app/api/summary', {
+      const response = await fetch('https://summary-ai-production.up.railway.app/api/summary' , { 
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
