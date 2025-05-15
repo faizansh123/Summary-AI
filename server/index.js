@@ -64,7 +64,7 @@ app.post('/api/chat', async (req, res) => {
             {
                 text: `
 Answer this question about the attached document: ${question}.
-Reply as a chat bot with short plain text only (no markdowns, tags or symbols).
+Reply as a chat bot and sound friendly and talkative (no markdowns, tags or symbols).
 Chat history: ${JSON.stringify(chatHistory)}
                 `
             },
